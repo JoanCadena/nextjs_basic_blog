@@ -1,0 +1,22 @@
+// Applies for dark mode
+@mixin dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+    background-color: black;
+    color: white;
+  }
+}
+
+// Applies for light mode
+@mixin light {
+  @media (prefers-color-scheme: light) {
+    @content;
+    background-color: white;
+    color: black;
+  }
+}
+
+.container {
+  @include dark;
+  @include light;
+}
